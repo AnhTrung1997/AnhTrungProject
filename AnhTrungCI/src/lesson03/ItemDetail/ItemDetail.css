@@ -1,0 +1,31 @@
+.item {
+    height: 300px;
+    width: 197px;
+
+    .infoItem {
+        width: 197px;
+        height: 93px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .nameItem {
+            display: flex;
+            justify-content: space-between;
+
+            p.name {
+                width: 140px;
+                font-size: 20px;
+                color: #383838;
+            }
+        }
+
+        .priceItem {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #383838;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.Bottom {
+    width: 848px;
+    height: 767px;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .Gift {
+        width: 848px;
+        height: 57px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        button {
+            font-size: 18px;
+            background-color: #FF4D00;
+            height: 57px;
+            width: 85px;
+            color: #FFFFFF;
+            border-radius: 10px;
+            border: #FF4D00;
+        }
+    }
+
+    .List {
+        width: 848px;
+        height: 630px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .Page {
+        height: 40px;
+        width: 333px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        button {
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            border: 1px solid #B4B4B4;
+            color: #B4B4B4;
+        }
+    }
+}
