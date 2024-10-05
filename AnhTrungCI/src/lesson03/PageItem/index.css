@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+
+.header {
+    margin: 20px 0;
+    width: 979px;
+    height: 39px;
+    display: flex;
+    justify-content: space-between;
+
+    button.trash {
+        background-color: red;
+        height: 40px;
+        width: 50px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    button.close {
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        border: none;
+    }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .item {
+        width: 979px;
+        height: 443px;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 508px;
+            height: 443px;
+            border-radius: 10px;
+        }
+
+        .itemDetail {
+            height: 443px;
+            width: 425px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 42;
+
+            .select {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 10px;
+                }
+            }
+
+            .Buy {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    height: 57px;
+                    width: 142px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: red;
+                    color: white;
+
+                }
+
+                .Qty {
+                    height: 42px;
+                    width: 126px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    button {
+                        background-color: red;
+                        height: 42px;
+                        width: 42px;
+                        border-radius: 10px;
+                        border: none;
+                        color: white;
+                    }
+
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .intro {
+        width: 979px;
+    }
+}
