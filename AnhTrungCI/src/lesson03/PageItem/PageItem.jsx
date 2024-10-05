@@ -1,18 +1,30 @@
+import { dataProduct } from '../Data'
 import './PageItem.css'
-const PageItem = (props) => {
+const PageItem = () => {
+    let count = 0
+    const clickUp = () => {
+        count++
+        sessionStorage.setItem("count", count)
+    }
+    const clickDown = () => {
+        if (count > 0) {
+            count--
+            sessionStorage.setItem("count", count)
+        }
+    }
     return (
         <>
-            <div class="header">
+            <div className="header">
                 <button className="trash">🗑</button>
                 <button className="close">X</button>
             </div>
-            <div class="body">
+            <div className="body">
                 <div className="item">
-                    <img src="https://s3-alpha-sig.figma.com/img/336b/3655/daa9dfa25a664d17a43fe974e48a64c8?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=osA1loeIUXoxNqtbcknZ-rnoNnFsOapbH8IkR0O2ZCPWgj8QsB0Pea7UKQojBgcMpxI0lR2Rn2EdhuIn8j-H9QpzI3CRaRvX~BTM82R8mPUgen5Tg2gLNBD99O68DMR1UhwWjEOLbUn7kwWWgzvZqhLKYr8il9lHdQC6-~OWtxSsuUB3Q9PHuc2yvKaahEOlUaVP6pOvY5ziNkr~x-kZk0B1AUjpneqN6pU2N68V7zSTjZI-U4m6beB44jyaFRje-YpfLU4gmyBn8me4x~jnX~5kSXgOqbppS8WbWDIQp9e0XtH~FzfZP93zeKk4Qe3QMA70ZXmu-HY-GmOCH4DmFQ__" />
+                    <img src={dataProduct[1].image} />
                     <div className="itemDetail">
-                        <p>Ngũ hạt thập cẩm, hũ trang trí ý nghĩa</p>
+                        <p>{dataProduct[1].name}</p>
                         <p>✰✰✰✰✰</p>
-                        <p>Giá: 42.000 VND</p>
+                        <p>Giá: {dataProduct[1].price}</p>
                         <p>Phân loại</p>
                         <div className="select">
                             <button>Nhỏ</button>
@@ -21,17 +33,15 @@ const PageItem = (props) => {
                         </div>
                         <div className="Buy">
                             <div className="Qty">
-                                <button>-</button>
-                                <p>0</p>
-                                <button>+</button>
+                                <button onClick={clickDown}>-</button>
+                                <p>{sessionStorage.getItem("count")}</p>
+                                <button onClick={clickUp}>+</button>
                             </div>
                             <button>Chọn mua</button>
                         </div>
                     </div>
                 </div>
-                <div className="intro"> <p>Ngũ hạt thập cẩm đặc sản Langfarm - Món ăn vặt ưa thích, hương vị thơm ngon, an toàn vệ sinh.
-                    Phù hợp làm quà
-                    vào các dịp lễ, thân thiện với mọi nhà</p>
+                <div className="intro"> <p>{dataProduct[1].name}</p>
                 </div>
                 <div className="listComment">
                     <div className="logoName">

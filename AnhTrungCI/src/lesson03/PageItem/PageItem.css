@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: arial;
+    font-size: 20px;
 }
 
 
@@ -18,6 +19,7 @@
         width: 50px;
         border-radius: 10px;
         border: none;
+        font-size: xx-large;
     }
 
     button.close {
@@ -25,6 +27,7 @@
         height: 40px;
         width: 40px;
         border: none;
+        font-size: 30px;
     }
 }
 
@@ -51,7 +54,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            font-size: 42;
+            font-size: 42px;
 
             .select {
                 display: flex;
@@ -61,6 +64,7 @@
                     height: 40px;
                     width: 100px;
                     border-radius: 10px;
+
                 }
             }
 
@@ -77,6 +81,7 @@
                     background-color: red;
                     color: white;
 
+
                 }
 
                 .Qty {
@@ -92,6 +97,7 @@
                         border-radius: 10px;
                         border: none;
                         color: white;
+
                     }
 
                     align-items: center;
