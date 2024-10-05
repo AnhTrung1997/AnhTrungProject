@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Top from './lesson03/Top/Top'
 import Bottom from './lesson03/Bottom/Bottom'
+import PageItem from './lesson03/PageItem/PageItem'
 
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
 
   return (
     <>
-      <Top />
-      <Bottom />
+      {/* <Top />
+      <Bottom /> */}
+      <PageItem />
     </>
   )
 }
