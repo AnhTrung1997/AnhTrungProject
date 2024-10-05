@@ -166,6 +166,14 @@
         flex-direction: column;
         justify-content: space-between;
 
+        input {
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
         .logoName {
             display: flex;
             gap: 5px;
