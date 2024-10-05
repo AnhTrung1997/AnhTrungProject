@@ -68,7 +68,7 @@ const PageItem = () => {
                     <input type="text" placeholder="Lưu lại đã, rồi mấy nữa tính tiếp..." />
                     <div className="status">
                         <p>5 min ago</p>
-                        <button></button>
+                        <button>🗑</button>
                     </div>
                 </div>
             </div>
