@@ -1,5 +1,6 @@
 import { dataProduct } from '../Data'
 import './PageItem.css'
+import { BiStar } from 'react-icons/bi'
 const PageItem = () => {
     let count = 0
     const clickUp = () => {
@@ -12,6 +13,13 @@ const PageItem = () => {
             sessionStorage.setItem("count", count)
         }
     }
+    const RatingStar = () => {
+        const star = []
+        for (let i = 0; i < 5; i++) {
+            star.push(<BiStar />)
+        }
+        return star
+    }
     return (
         <>
             <div className="header">
@@ -23,7 +31,7 @@ const PageItem = () => {
                     <img src={dataProduct[1].image} />
                     <div className="itemDetail">
                         <p>{dataProduct[1].name}</p>
-                        <p>✰✰✰✰✰</p>
+                        <p style={{ display: 'flex' }}>{RatingStar()}</p>
                         <p>Giá: {dataProduct[1].price}</p>
                         <p>Phân loại</p>
                         <div className="select">
