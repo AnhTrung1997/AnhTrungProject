@@ -103,4 +103,87 @@
     .intro {
         width: 979px;
     }
+
+    .listComment {
+        height: 198px;
+        width: 979px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .logoName {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+        }
+
+        hr {
+            width: 947px;
+            border: 1px solid gray;
+        }
+
+        .submit {
+            display: flex;
+            flex-direction: row-reverse;
+
+            button {
+                height: 44px;
+                width: 108px;
+                border: none;
+                border-radius: 8px;
+                background-color: blue;
+                color: white;
+            }
+        }
+    }
+
+    hr {
+        width: 979px;
+    }
+
+    .comment {
+        height: 198px;
+        width: 979px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .logoName {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+        }
+
+        .status {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                height: 40px;
+                width: 50px;
+                border: none;
+                border-radius: 8px;
+                background-color: red;
+                color: white;
+            }
+        }
+    }
 }
