@@ -1,16 +1,16 @@
 import { dataProduct } from '../Data'
 import './PageItem.css'
 import { BiStar } from 'react-icons/bi'
+import { useState } from 'react'
+
 const PageItem = () => {
-    let count = 0
+    const [count, setCount] = useState(0)
     const clickUp = () => {
-        count++
-        sessionStorage.setItem("count", count)
+        setCount(count + 1)
     }
     const clickDown = () => {
         if (count > 0) {
-            count--
-            sessionStorage.setItem("count", count)
+            setCount(count - 1)
         }
     }
     const RatingStar = () => {
@@ -42,7 +42,7 @@ const PageItem = () => {
                         <div className="Buy">
                             <div className="Qty">
                                 <button onClick={clickDown}>-</button>
-                                <p>{sessionStorage.getItem("count")}</p>
+                                <p>{count}</p>
                                 <button onClick={clickUp}>+</button>
                             </div>
                             <button>Chọn mua</button>
