@@ -5,13 +5,11 @@ import PageItem from './lesson03/PageItem/PageItem'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [check, letCheck] = useState(0)
   return (
     <>
-      {/* <Top />
-      <Bottom /> */}
-      <PageItem />
+      {(check == 0) && <> <Top /> <Bottom /> </>}
+      {(check == 1) && <PageItem />}
     </>
   )
 }
