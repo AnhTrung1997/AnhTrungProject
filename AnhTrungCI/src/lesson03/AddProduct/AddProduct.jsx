@@ -17,7 +17,7 @@ const AddProduct = ({ isOpen, CloseTab, addData }) => {
         setinfoProduct({ ...infoProduct })
         console.log(infoProduct)
     }
-    let data = JSON.parse(localStorage.getItem('data'))
+    let data = []
     const handleSubmit = (event) => {
         event.preventDefault()
         data.push(infoProduct)
