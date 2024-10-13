@@ -2,17 +2,36 @@ import { BiAlignLeft, BiDockLeft, BiLeftArrow, BiLeftArrowAlt, BiLeftDownArrowCi
 import './Bottom.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { dataProduct } from '../Data'
+import { useState } from 'react'
+import AddProduct from '../AddProduct/AddProduct'
+import { Content } from 'antd/es/layout/layout'
 const Bottom = () => {
+    const [checkAdd, setcheckAdd] = useState(false)
+    const clickAdd = () => {
+        setcheckAdd(true)
+
+    }
+    const close = () => {
+        setcheckAdd(false)
+    }
+    const dataList = [{
+        name: "Granola siêu hạt ăn kiêng 15% yến mạch",
+        price: 75000,
+        image: './image/item1.png',
+        discount: "99%",
+    }]
+    //dataList.push(JSON.parse(localStorage.getItem('data')))
     return (
         <>
+            {checkAdd && < AddProduct isOpen={checkAdd} CloseTab={close} />}
             <div className="Bottom">
                 <div className="Gift">
                     <h3>Quà tặng</h3>
-                    <button>Tạo</button>
+                    <button onClick={clickAdd}>Tạo</button>
                 </div>
                 <div className="List">
                     {
-                        dataProduct.map((product) => {
+                        dataList.map((product) => {
                             return <ItemDetail product={product} />
                         })
                     }
