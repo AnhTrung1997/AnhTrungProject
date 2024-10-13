@@ -14,16 +14,26 @@ const Bottom = () => {
     const close = () => {
         setcheckAdd(false)
     }
-    const dataList = [{
-        name: "Granola siêu hạt ăn kiêng 15% yến mạch",
-        price: 75000,
-        image: './image/item1.png',
-        discount: "99%",
-    }]
-    //dataList.push(JSON.parse(localStorage.getItem('data')))
+    // const dataList = [
+    //     //     {
+    //     //     name: "Granola siêu hạt ăn kiêng 15% yến mạch",
+    //     //     price: 75000,
+    //     //     image: './image/item1.png',
+    //     //     discount: "99%",
+    //     // }
+    // ]
+    //console.log(LocalStorage.getItem('data'))
+    // if (
+    //     LocalStorage.getItem('data') != null
+    // ) { dataList.push(JSON.parse(localStorage.getItem('data'))) }
+
+    const [dataList, setdataList] = useState([])
+    const adddataList = () => {
+        setdataList(JSON.parse(localStorage.getItem('data')))
+    }
     return (
         <>
-            {checkAdd && < AddProduct isOpen={checkAdd} CloseTab={close} />}
+            {checkAdd && < AddProduct isOpen={checkAdd} CloseTab={close} addData={adddataList} />}
             <div className="Bottom">
                 <div className="Gift">
                     <h3>Quà tặng</h3>

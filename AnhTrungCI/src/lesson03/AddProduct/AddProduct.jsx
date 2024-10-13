@@ -1,7 +1,7 @@
 import { Modal } from 'antd'
 import InputProduct from './InputProduct'
 import { useState } from 'react'
-const AddProduct = ({ isOpen, CloseTab }) => {
+const AddProduct = ({ isOpen, CloseTab, addData }) => {
     const [infoProduct, setinfoProduct] = useState(
         {
             name: '',
@@ -17,9 +17,11 @@ const AddProduct = ({ isOpen, CloseTab }) => {
         setinfoProduct({ ...infoProduct })
         console.log(infoProduct)
     }
+    let data = JSON.parse(localStorage.getItem('data'))
     const handleSubmit = (event) => {
         event.preventDefault()
         data.push(infoProduct)
+        console.log(data)
         localStorage.setItem('data', JSON.stringify(data))
     }
 
@@ -27,6 +29,8 @@ const AddProduct = ({ isOpen, CloseTab }) => {
         <Modal
 
             onCancel={CloseTab}
+            onOk={addData}
+
             width='1200px'
             open={isOpen}>
             <form onSubmit={handleSubmit}>
