@@ -45,7 +45,7 @@ const PageItem = ({ isOpen, handleHideModal, product }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="intro"> <p>{dataProduct[1].name}</p>
+                    <div className="intro"> <p>{dataProduct.name}</p>
                     </div>
                     <div className="listComment">
                         <div className="logoName">
