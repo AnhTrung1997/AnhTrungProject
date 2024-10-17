@@ -27,7 +27,7 @@ const Bottom = () => {
     //     LocalStorage.getItem('data') != null
     // ) { dataList.push(JSON.parse(localStorage.getItem('data'))) }
 
-    const [dataList, setdataList] = useState([])
+    const [dataList, setdataList] = useState(JSON.parse(localStorage.getItem('data')))
     const adddataList = () => {
         setdataList(JSON.parse(localStorage.getItem('data')))
     }
