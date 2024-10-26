@@ -1,19 +1,31 @@
 import { BiAlignLeft, BiDockLeft, BiLeftArrow, BiLeftArrowAlt, BiLeftDownArrowCircle, BiRightArrowAlt } from 'react-icons/bi'
 import './Bottom.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { dataProduct } from '../Data'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import AddProduct from '../AddProduct/AddProduct'
-import { Content } from 'antd/es/layout/layout'
 const Bottom = () => {
-    const [checkAdd, setcheckAdd] = useState(false)
-    const clickAdd = () => {
-        setcheckAdd(true)
+    const [dataList, setdataList] = useState([])
+    const url = `https://671bac7c2c842d92c380df8e.mockapi.io/product`
+    useEffect(() => {
+        fetch(url)
+            .then((res) => res.json())
+            .then((result) => {
 
-    }
-    const close = () => {
-        setcheckAdd(false)
-    }
+                setdataList(result)
+
+            });
+    });
+
+    /* Test useEffect */
+    // const [checkAdd, setcheckAdd] = useState(false)
+    // const clickAdd = () => {
+    //     setcheckAdd(true)
+
+
+    // }
+    // const close = () => {
+    //     setcheckAdd(false)
+    // }
     // const dataList = [
     //     //     {
     //     //     name: "Granola siêu hạt ăn kiêng 15% yến mạch",
@@ -27,17 +39,18 @@ const Bottom = () => {
     //     LocalStorage.getItem('data') != null
     // ) { dataList.push(JSON.parse(localStorage.getItem('data'))) }
 
-    const [dataList, setdataList] = useState(JSON.parse(localStorage.getItem('data')))
-    const adddataList = () => {
-        setdataList(JSON.parse(localStorage.getItem('data')))
-    }
+    // const [dataList, setdataList] = useState(JSON.parse(localStorage.getItem('data')))
+    // const adddataList = () => {
+    //     setdataList(JSON.parse(localStorage.getItem('data')))
+
     return (
         <>
-            {checkAdd && < AddProduct isOpen={checkAdd} CloseTab={close} addData={adddataList} />}
+            {/* Test useEffect */}
+            {/* {checkAdd && < AddProduct isOpen={checkAdd} CloseTab={close} addData={adddataList} />} */}
             <div className="Bottom">
                 <div className="Gift">
                     <h3>Quà tặng</h3>
-                    <button onClick={clickAdd}>Tạo</button>
+                    <button >Tạo</button>
                 </div>
                 <div className="List">
                     {
