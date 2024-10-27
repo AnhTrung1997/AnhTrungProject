@@ -20,19 +20,19 @@ export const dataProduct = JSON.parse(localStorage.getItem('data'))
 // },
 // {
 
-//     name: "Ngũ hạt thập cẩm, 135g, hũ",
+//     name: "Hạnh nhân rang muối biển, 240g, hũ",
 //     price: 175000,
 //     image:
-//         "./image/item3.png",
+//         "./image/item2.png",
 //     discount: "99%",
 
 // },
 // {
 
-//     name: "Đậu hòa lan wasabi, 150g, hũ",
+//     name: "Hạnh nhân rang muối biển, 240g, hũ",
 //     price: 175000,
 //     image:
-//         "./image/item4.png",
+//         "./image/item2.png",
 //     discount: "99%",
 
 // },
@@ -68,7 +68,5 @@ export const dataProduct = JSON.parse(localStorage.getItem('data'))
 //     image:
 //         "./image/item8.png",
 //     discount: "99%",
-//     rating: 4,
-//     category: ['Nhỏ', 'Vừa', 'Lớn'],
-//     status: ['Đang bán', 'Hết hàng', 'Ngưng bán']
+   
 // },]

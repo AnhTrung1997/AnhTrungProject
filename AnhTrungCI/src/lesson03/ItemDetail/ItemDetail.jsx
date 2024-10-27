@@ -2,19 +2,14 @@ import { useState } from 'react'
 import './ItemDetail.css'
 import { BiAlarm, BiAlignLeft, BiCard, BiDockLeft, BiLeftArrow, BiLeftArrowAlt, BiLeftDownArrowCircle, BiRightArrowAlt, BiShoppingBag, BiSolidShoppingBagAlt } from 'react-icons/bi'
 import PageItem from '../PageItem/PageItem'
+import { useNavigate } from 'react-router-dom'
 const ItemDetail = (props) => {
-    const [check, setCheck] = useState(false)
-    const clickShow = () => {
-        setCheck(true)
-    }
-    const clickHide = () => {
-        setCheck(false)
-    }
+    const nav = useNavigate()
     return (
-
         <>
-            {check && <PageItem handleHideModal={clickHide} isOpen={check} product={props.product} />}
-            <div className="item" onClick={clickShow}>
+            <div onClick={() => {
+                nav(`/${props.product.id}`)
+            }} className="item">
                 <img src={props.product.image} style={{ width: "197px" }} />
                 <div className="infoItem">
                     <div className="nameItem">
