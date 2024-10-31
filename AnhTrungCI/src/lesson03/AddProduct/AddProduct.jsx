@@ -1,7 +1,7 @@
 import { Modal } from 'antd'
 import InputProduct from './InputProduct'
 import { useState } from 'react'
-const AddProduct = ({ isOpen, CloseTab, addData }) => {
+const AddProduct = ({ isOpen, clickClose, addData }) => {
     const [infoProduct, setinfoProduct] = useState(
         {
             name: '',
@@ -27,7 +27,7 @@ const AddProduct = ({ isOpen, CloseTab, addData }) => {
 
     return (
         <Modal
-            onCancel={CloseTab}
+            onCancel={clickClose}
             onOk={addData}
             width='1200px'
             open={isOpen}>

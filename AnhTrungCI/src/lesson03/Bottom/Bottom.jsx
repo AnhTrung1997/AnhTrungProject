@@ -21,9 +21,7 @@ const Bottom = () => {
         handleData()
     }, [])
     const handleOpen = () => {
-
-        setIsOpenModal(true)
-        console.log('tesst')
+        setIsOpenModal(!isOpenModal)
     }
 
     return (
@@ -54,7 +52,7 @@ const Bottom = () => {
                             <BiRightArrowAlt fontSize={24} />
                         </div>
                     </div>
-                    <AddProduct isOpen={isOpenModal} />
+                    <AddProduct isOpen={isOpenModal} clickClose={handleOpen} />
                 </>
 
 
