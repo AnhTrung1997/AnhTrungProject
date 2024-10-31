@@ -27,10 +27,8 @@ const AddProduct = ({ isOpen, CloseTab, addData }) => {
 
     return (
         <Modal
-
             onCancel={CloseTab}
             onOk={addData}
-
             width='1200px'
             open={isOpen}>
             <form onSubmit={handleSubmit}>
