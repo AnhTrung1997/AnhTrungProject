@@ -1,11 +1,11 @@
 
 import { dataProduct } from '../Data'
 import './PageItem.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 
-const PageItem = ({ handleHideModal }) => {
+const PageItem = () => {
     const [dataList, setdataList] = useState([])
     const url = `https://671bac7c2c842d92c380df8e.mockapi.io/product`
     useEffect(() => {
@@ -31,11 +31,14 @@ const PageItem = ({ handleHideModal }) => {
             letCount(count - 1)
         }
     }
+    const nav = useNavigate()
     return (
         <div className='Main' >
             <div className="header">
                 <button className="trash">🗑</button>
-                <button className="close" onClick={handleHideModal}>X</button>
+                <button className="close" onClick={() => {
+                    nav('/')
+                }}>X</button>
             </div>
             <div className="body">
                 <div className="item">
