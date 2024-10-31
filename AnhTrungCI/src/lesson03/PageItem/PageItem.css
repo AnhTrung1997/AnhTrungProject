@@ -1,19 +1,15 @@
-/* * {
+* {
     margin: 0;
     box-sizing: border-box;
     font-family: arial;
     font-size: 20px;
-} */
+}
 
 .Main {
-    /* position: fixed;
-    right: 20%;
-    top: 20%; */
-
 
     .header {
         margin: 20px 0;
-        /* width: 979px; */
+        width: 979px;
         height: 39px;
         display: flex;
         justify-content: space-between;
